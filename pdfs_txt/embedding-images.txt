@@ -1,0 +1,99 @@
+View all Web Publishing Support Articles
+Web Publishing: Embedding Images in the WCM
+Overview
+Many of Sac State’s T4 and T5 pages have embedded images, either as decorative images that show off different areas
+of campus or more directly related images to that department (See Fig 1). In every case, certain considerations need to be
+made when embedding an image in Cascade. Most of the work you’ll do with images will be done outside of Cascade. In
+this article, we’ll show you where to find web team-approved images, how to adjust image properties, show where an
+image can be embedded, and how to properly upload and embed the image.
+Instructions
+Finding and Preparing Images
+There are many sites where you can find images, stock photography, or decorative snapshots, but we recommend using
+the Sac State Flickr since those are pre-vetted images of our campus and community.
+Fig 1.
+1. Open your web browser and navigate to the Sac State Flickr account.
+2. Locate the image you would like to embed in your site.
+There are images that are landscape orientation, in which the width is greater than the height, and portrait
+orientation, in which the height is greater than the width. Consider the space you’ll be embedding the image into
+before deciding on your preferred orientation.
+3. Select the picture, and then use the download icon to bring up the download size options.
+4. Select any option larger than 1000 pixels for normal embedded photos. For a banner image, 2000 pixels will be
+needed.
+5. Once the image is downloaded, resize the image to make it about 1000 pixels wide. The WCM does not do this
+automatically, so resizing the image down to 1000 pixels wide can help improve the site's load time. The process is a
+10/1/25, 1:14 PM
+Web Publishing: Embedding Images in the WCM | IRT Web & Mobile Services Buzz Hub
+https://mysacstate.sharepoint.com/sites/irt-wms/SitePages/articles/web-publishing-embedding-images-in-the-wcm.aspx
+1/3
+
+Related Articles
+See all
+Web Publishing: Embedding
+Images in the WCM | IRT…
+Stewart, Portia Edited August 13
+IRT Web & Mobile Services Bu…
+Make sure that you save the image file type as JPG, as this will compress the image and make sure it's viewable on a wide
+variety of devices. A few other formats are allowed as well, but avoid large, less compatible file formats like Photoshop
+PSD files, which can be gigabytes in size depending on the image.
+Upload
+With your image chosen and now prepped for uploading, the next step is to upload the image to the WCM (Cascade).
+Upload Location
+NOTE: If the image has not been uploaded before, then proceed to the next step. However, if the image has already
+been uploaded, you can select it from the “Browse” menu instead.
+Site Location
+You can embed an image in a T4 or T5 page in different sections, either by itself, or as part of text in a “what you see is
+what you get,” or WYSWYG text area.
+An image can be embedded as an image by itself in a T4 in the top right box, or the bottom left box. It can also be
+embedded as a part of a WYSWYG section in any quadrant except the top left.
+In a T5, you can elect to make a “two-column” page, which allows for an “Image only” or WYSWYG option on the right
+column, similar to the T4. There’s also an option for a two-column showcase, which allows an image as a header and a
+one column showcase which also allows images as headers. These pre-made template choices will help make it easier to
+consistently display images on your site.
+little different for Mac and PC users.
+PC- Find the downloaded image in file explorer, and right click to select open with -> 3D Paint. Once the image is
+in Paint 3D, select “Canvas” from the top menu, and then reduce the width to 1000 pixels. This will automatically
+reduce the height as well to maintain the image’s aspect ratio. Close out of Paint 3D and save changes.
+Mac- Open the image in the “Preview” application, then select Tools -> Adjust Size from the Application menu.
+From there, change the width and height measurement to pixels, and then set the width to 1000. The height will
+adjust automatically to preserve the image’s aspect ratio. Click File -> Save and you’re done!
+1. Open your web browser, navigate to the webpage that you want to add the image to, and click the Green Dot in the
+bottom left corner of the footer to login.
+2. Click the Edit pencil icon in the top right of the page.
+3. Navigate to the section you want to edit.
+4. If the Content Type is “Image Only," then click the “Choose File” area to open the file upload column. Otherwise, place
+your cursor where you would like the image to appear and click the "Insert/Edit Image" icon in the WYSWYG toolbar.
+1. Select “Upload” from the tabs at the top of the upload column. From here, you can click and drag the image into the
+box marked with the dotted line, or click “choose” to open a file select window.
+2. Now choose the placement folder. Since we navigated to the page we’re going to upload a photo to, the WCM should
+automatically choose the folder for you. It’s best to check that the image is being uploaded to the correct location
+though. Check the breadcrumb navigation in the middle of the column, and then choose_ internal > _images as the
+placement folder.
+3. Update the Image description so that it is a short and descriptive description of the image (web accessibility
+requirement).
+4. Click “Choose” at the top of the column, and the image will begin uploading.
+5. Save and preview, make sure the page looks the way you intended, then publish the page to queue the changes for
+publication on the site. It sometimes takes the WCM a few minutes to publish changes.
+10/1/25, 1:14 PM
+Web Publishing: Embedding Images in the WCM | IRT Web & Mobile Services Buzz Hub
+https://mysacstate.sharepoint.com/sites/irt-wms/SitePages/articles/web-publishing-embedding-images-in-the-wcm.aspx
+2/3
+
+Need Assistance?
+Web Publishing: Embedding
+Videos in the WCM | IRT…
+Stewart, Portia Edited August 13
+IRT Web & Mobile Services Bu…
+Web Publishing: Using the
+Gallery Content Type | IRT…
+Stewart, Portia Edited August 13
+IRT Web & Mobile Services Bu…
+Web Publishing: Adding
+Handshake Job Listings o…
+Stewart, Portia Edited August 13
+IRT Web & Mobile Services Bu…
+
+Submit an IRT Ticket
+10/1/25, 1:14 PM
+Web Publishing: Embedding Images in the WCM | IRT Web & Mobile Services Buzz Hub
+https://mysacstate.sharepoint.com/sites/irt-wms/SitePages/articles/web-publishing-embedding-images-in-the-wcm.aspx
+3/3

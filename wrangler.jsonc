@@ -7,6 +7,19 @@
 	"name": "irt-bot",
 	"main": "src/index.ts",
 	"compatibility_date": "2025-10-01",
+	// workers AI binding (LLM + embeddings)
+	"ai": {
+		"binding": "AI",
+		"remote": true
+	},
+	//vectorizing binding (points to my'irt_kb' index)
+	"vectorize": [
+		{
+			"binding": "VECTORIZE",
+			"index_name": "irt_kb",
+			"remote": true
+		}
+	],
 	"migrations": [
 		{
 			"new_sqlite_classes": [
@@ -25,7 +38,17 @@
 	},
 	"observability": {
 		"enabled": true
-	}
+	},
+	// Environment variables for Vectorize REST API workaround
+	"vars": {
+		"CLOUDFLARE_ACCOUNT_ID": "beba7d21af24bc933aebc224efb25332"
+	},
+	"kv_namespaces": [
+		{
+			"binding": "CHUNKS",
+			"id": "aff4bbcb8b004a2fae9b704a94d84e01"
+		}
+	]
 	/**
 	 * Smart Placement
 	 * Docs: https://developers.cloudflare.com/workers/configuration/smart-placement/#smart-placement

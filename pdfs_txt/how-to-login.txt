@@ -1,0 +1,45 @@
+View all Web Publishing Support Articles
+Web Publishing: How to Login to the WCM
+Overview
+Once you have completed the Web Publishers Canvas training course and you are provisioned in, there are two ways to
+start editing a webpage in the WCM: login via the Green Dot Shortcut or login via CascadeCMS.com. This article lists
+instructions for both.
+How to Login via the Green Dot Shortcut
+If you know exactly what page you wish to edit on the site, simply navigate to that page and scroll to the very bottom.
+There is a small green dot on the left side of the footer. Clicking this dot and logging in with your Sac State username and
+password will take you directly to the page's location inside the WCM, allowing you to edit it without searching through
+the drop down menu.
+How to Login via CascadeCMS.com
+Open a browser and navigate to https://csus.cascadecms.com/. Feel free to bookmark the link now for easier access
+later.
+Login with your Sac State username and password.
+Navigate to Site: Go To Site in the upper left-hand corner
+10/1/25, 1:13 PM
+Web Publishing: How to Login to the WCM | IRT Web & Mobile Services Buzz Hub
+https://mysacstate.sharepoint.com/sites/irt-wms/SitePages/articles/web-publishing-how-to-login-to-the-wcm.aspx
+1/3
+
+Related Articles
+See all
+Need Assistance?
+Web Publishing: How to
+Login to the WCM | IRT We…
+Stewart, Portia Edited August 27
+IRT Web & Mobile Services Bu…
+Web Publishing: How to
+Work With Your T5 Page in…
+Stewart, Portia Edited August 13
+IRT Web & Mobile Services Bu…
+Web Publishing: How to
+Work with Your T4 Page in…
+Stewart, Portia Edited August 13
+IRT Web & Mobile Services Bu…
+
+Submit an IRT Ticket
+From the drop-down menu, select your area.
+Once you reach the directory for your unit or department, click on index to see your department's main page (T4), or
+click the specific page(T5) you need to edit.
+10/1/25, 1:13 PM
+Web Publishing: How to Login to the WCM | IRT Web & Mobile Services Buzz Hub
+https://mysacstate.sharepoint.com/sites/irt-wms/SitePages/articles/web-publishing-how-to-login-to-the-wcm.aspx
+2/3

@@ -1,0 +1,53 @@
+View all Web Publishing Support Articles
+Web Publishing: Using the Connect Bar Functionality in the WCM
+Overview
+The connect bar is an area towards the bottom of the T4 page that allows anyone visiting the page to know where to find
+that office on campus, the hours the office keeps, the phone number, and an option to look at a roster of employees and
+their position in the “Meet Us” section.
+Instructions
+To add to or edit the contact bar:
+Navigate to your T4 page in the WCM
+Click the “Edit” pencil at the top-right of the page, and then scroll down until you reach “Connect Area.”
+Select the arrow to the left of “Connect Area,” and make sure the “Show/Hide” menu is set to “Show.”
+Make sure there is something written in the “Header for Connect Area.” This will not display anywhere on the page but
+is necessary for accessibility purposes.
+There are four areas that make up the connect bar: Find Us, Contacts Us, Meet Us, and Follow Us. “Meet Us” will be
+covered in another KB.
+Make sure the sections in Find Us are filled out are much as possible. There are a few formatting notes in this section
+that need to be followed: under “Building Name Location of Department Office,” write out the full name of the building,
+and follow it with a comma and the room number. Do not fill out the room number in the next line down. Any lines left
+blank will not show on the page.
+Under “Contact Us,” put the phone number for the front desk phone or administrative support assistant if available.
+10/1/25, 1:13 PM
+Web Publishing: Using the Connect Bar Functionality | IRT Web & Mobile Services Buzz Hub
+https://mysacstate.sharepoint.com/sites/irt-wms/SitePages/articles/web-publishing-using-the-connect-bar-functionality.aspx
+1/2
+
+Related Articles
+See all
+Need Assistance?
+Web Publishing: Embedding
+Images in the WCM | IRT…
+Stewart, Portia Edited August 13
+IRT Web & Mobile Services Bu…
+Web Publishing: Embedding
+Videos in the WCM | IRT…
+Stewart, Portia Edited August 13
+IRT Web & Mobile Services Bu…
+Web Publishing: Using the
+Gallery Content Type | IRT…
+Stewart, Portia Edited August 13
+IRT Web & Mobile Services Bu…
+Web Publishing: Adding
+Handshake Job Listings o…
+Stewart, Portia Edited August 13
+IRT Web & Mobile Services Bu…
+
+Submit an IRT Ticket
+The “Follow Us,” section can include links to your department or office's social media. This section can also be left
+blank or can include social media links for the University.
+Save and preview your page. Verify that the information is correct and then republish the page. 
+10/1/25, 1:13 PM
+Web Publishing: Using the Connect Bar Functionality | IRT Web & Mobile Services Buzz Hub
+https://mysacstate.sharepoint.com/sites/irt-wms/SitePages/articles/web-publishing-using-the-connect-bar-functionality.aspx
+2/2
