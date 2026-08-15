@@ -1,0 +1,110 @@
+[
+  {
+    "id": "login-01",
+    "question": "What are the two ways to log in to the WCM?",
+    "expected_answer": "You can log in through the Green Dot Shortcut on the webpage you want to edit, or by going directly to CascadeCMS.com.",
+    "source_document": "pdfs_txt/how-to-login.txt"
+  },
+  {
+    "id": "login-02",
+    "question": "How do I use the Green Dot Shortcut to open a page in the WCM?",
+    "expected_answer": "Navigate to the page you want to edit, scroll to the bottom, click the small green dot on the left side of the footer, and log in with your Sac State username and password. This takes you directly to that page's location in the WCM.",
+    "source_document": "pdfs_txt/how-to-login.txt"
+  },
+  {
+    "id": "login-03",
+    "question": "What website can I use to log in directly to Cascade CMS?",
+    "expected_answer": "Go to https://csus.cascadecms.com/ and log in with your Sac State username and password.",
+    "source_document": "pdfs_txt/how-to-login.txt"
+  },
+  {
+    "id": "login-04",
+    "question": "After logging in through CascadeCMS.com, how do I find my department's page?",
+    "expected_answer": "Use Site: Go To Site in the upper-left corner, select your area from the drop-down menu, then navigate to your unit or department directory. Click index for the department's main T4 page or select the specific T5 page you need to edit.",
+    "source_document": "pdfs_txt/how-to-login.txt"
+  },
+  {
+    "id": "connect-01",
+    "question": "What is the connect bar used for on a T4 page?",
+    "expected_answer": "The connect bar appears toward the bottom of a T4 page and provides information such as where the office is located, office hours, a phone number, employee information in Meet Us, and social media links.",
+    "source_document": "pdfs_txt/content-bar.txt"
+  },
+  {
+    "id": "connect-02",
+    "question": "How do I make the Connect Area visible on a T4 page?",
+    "expected_answer": "Open the page in the WCM, click the Edit pencil, scroll to Connect Area, expand it using the arrow, and set the Show/Hide menu to Show.",
+    "source_document": "pdfs_txt/content-bar.txt"
+  },
+  {
+    "id": "connect-03",
+    "question": "Why does the Header for Connect Area need to contain text even though it is not shown on the page?",
+    "expected_answer": "The Header for Connect Area must contain text for accessibility purposes, even though that text does not display on the page.",
+    "source_document": "pdfs_txt/content-bar.txt"
+  },
+  {
+    "id": "connect-04",
+    "question": "What are the four sections that make up the connect bar?",
+    "expected_answer": "The four sections are Find Us, Contact Us, Meet Us, and Follow Us.",
+    "source_document": "pdfs_txt/content-bar.txt"
+  },
+  {
+    "id": "connect-05",
+    "question": "How should the building location be entered in the Find Us section?",
+    "expected_answer": "Enter the full building name followed by a comma and the room number in the Building Name Location of Department Office field. Do not enter the room number again on the next line.",
+    "source_document": "pdfs_txt/content-bar.txt"
+  },
+  {
+    "id": "connect-06",
+    "question": "What phone number should be entered under Contact Us?",
+    "expected_answer": "Use the front desk phone number or the administrative support assistant's phone number, if available.",
+    "source_document": "pdfs_txt/content-bar.txt"
+  },
+  {
+    "id": "image-01",
+    "question": "Where does the documentation recommend finding images for Sac State webpages?",
+    "expected_answer": "The documentation recommends using the Sac State Flickr account because the images there are already vetted for the campus and community.",
+    "source_document": "pdfs_txt/embedding-images.txt"
+  },
+  {
+    "id": "image-02",
+    "question": "What image size should I download for a normal embedded photo and for a banner image?",
+    "expected_answer": "For a normal embedded photo, choose a download option larger than 1000 pixels. For a banner image, use an image around 2000 pixels.",
+    "source_document": "pdfs_txt/embedding-images.txt"
+  },
+  {
+    "id": "image-03",
+    "question": "Why should an image be resized to about 1000 pixels wide before uploading it to the WCM?",
+    "expected_answer": "The WCM does not resize images automatically, so reducing the image to about 1000 pixels wide can improve the site's load time.",
+    "source_document": "pdfs_txt/embedding-images.txt"
+  },
+  {
+    "id": "image-04",
+    "question": "What file format is recommended for uploaded images?",
+    "expected_answer": "JPG is recommended because it compresses the image and is viewable on a wide variety of devices. Large, less compatible formats such as Photoshop PSD files should be avoided.",
+    "source_document": "pdfs_txt/embedding-images.txt"
+  },
+  {
+    "id": "image-05",
+    "question": "Where can an image be embedded on a T4 page?",
+    "expected_answer": "On a T4 page, an image can be placed by itself in the top-right or bottom-left box. It can also be embedded inside a WYSIWYG section in any quadrant except the top-left.",
+    "source_document": "pdfs_txt/embedding-images.txt"
+  },
+  {
+    "id": "image-06",
+    "question": "What folder should be used when uploading images in the WCM?",
+    "expected_answer": "Check the breadcrumb navigation and use the _internal > _images folder as the placement folder.",
+    "source_document": "pdfs_txt/embedding-images.txt"
+  },
+  {
+    "id": "image-07",
+    "question": "What should be entered in the image description field when uploading an image?",
+    "expected_answer": "Enter a short, descriptive description of the image. This is required for web accessibility.",
+    "source_document": "pdfs_txt/embedding-images.txt"
+  },
+  {
+    "id": "image-08",
+    "question": "What should I do after uploading and placing an image on a page?",
+    "expected_answer": "Save and preview the page, confirm it looks the way you intended, and then publish the page to queue the changes for publication. Publishing may take a few minutes.",
+    "source_document": "pdfs_txt/embedding-images.txt"
+  }
+]
