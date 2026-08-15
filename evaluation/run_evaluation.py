@@ -1,15 +1,15 @@
 #!/usr/bin/env python3
 """Run the golden evaluation set against the deployed IRT knowledge bot.
 
-This script intentionally does not score responses yet. It only creates a
-repeatable baseline by sending every golden-set question to the bot and saving
-its answer alongside the expected answer.
+This script intentionally does not score responses yet. It creates a repeatable
+baseline by sending every golden-set question to the evaluation endpoint and
+saving the bot answer plus the retrieved chunks used to generate that answer.
 
 Usage:
-    python evaluation/run_evaluation.py --url https://<worker-domain>/ask
+    python evaluation/run_evaluation.py --url https://<worker-domain>
 
 You can also set the endpoint with an environment variable:
-    export IRT_BOT_URL=https://<worker-domain>/ask
+    export IRT_BOT_URL=https://<worker-domain>
     python evaluation/run_evaluation.py
 """
 
@@ -52,7 +52,11 @@ def load_golden_dataset(path: Path) -> list[dict[str, Any]]:
     return data
 
 
-def ask_bot(endpoint: str, question: str, timeout: float) -> tuple[str | None, str | None]:
+def ask_bot(
+    endpoint: str,
+    question: str,
+    timeout: float,
+) -> tuple[str | None, list[dict[str, Any]], str | None]:
     payload = json.dumps({"question": question}).encode("utf-8")
     req = request.Request(
         endpoint,
@@ -66,26 +70,42 @@ def ask_bot(endpoint: str, question: str, timeout: float) -> tuple[str | None, s
             raw_body = response.read().decode("utf-8")
             body = json.loads(raw_body)
             answer = body.get("answer")
+            retrieved_chunks = body.get("retrieved_chunks", [])
 
             if not isinstance(answer, str):
-                return None, f"Response did not contain a string 'answer': {raw_body}"
+                return None, [], f"Response did not contain a string 'answer': {raw_body}"
 
-            return answer.strip(), None
+            if not isinstance(retrieved_chunks, list):
+                return None, [], "Response field 'retrieved_chunks' was not a list."
+
+            normalized_chunks = []
+            for chunk in retrieved_chunks:
+                if isinstance(chunk, dict):
+                    normalized_chunks.append(
+                        {
+                            "id": chunk.get("id"),
+                            "score": chunk.get("score"),
+                            "metadata": chunk.get("metadata"),
+                            "text": chunk.get("text"),
+                        }
+                    )
+
+            return answer.strip(), normalized_chunks, None
 
     except error.HTTPError as exc:
         try:
             details = exc.read().decode("utf-8")
         except Exception:
             details = ""
-        return None, f"HTTP {exc.code}: {details or exc.reason}"
+        return None, [], f"HTTP {exc.code}: {details or exc.reason}"
     except error.URLError as exc:
-        return None, f"Connection error: {exc.reason}"
+        return None, [], f"Connection error: {exc.reason}"
     except TimeoutError:
-        return None, "Request timed out"
+        return None, [], "Request timed out"
     except json.JSONDecodeError as exc:
-        return None, f"Bot returned invalid JSON: {exc}"
-    except Exception as exc:  # Keep a single bad request from stopping the whole run.
-        return None, f"Unexpected error: {exc}"
+        return None, [], f"Bot returned invalid JSON: {exc}"
+    except Exception as exc:
+        return None, [], f"Unexpected error: {exc}"
 
 
 def run_evaluation(
@@ -102,7 +122,7 @@ def run_evaluation(
         print(f"[{index}/{total}] {question}")
 
         started = time.perf_counter()
-        answer, request_error = ask_bot(endpoint, question, timeout)
+        answer, retrieved_chunks, request_error = ask_bot(endpoint, question, timeout)
         elapsed_ms = round((time.perf_counter() - started) * 1000, 2)
 
         result = {
@@ -111,6 +131,7 @@ def run_evaluation(
             "expected_answer": item["expected_answer"],
             "source_document": item["source_document"],
             "bot_answer": answer,
+            "retrieved_chunks": retrieved_chunks,
             "request_error": request_error,
             "latency_ms": elapsed_ms,
         }
@@ -120,6 +141,13 @@ def run_evaluation(
             print(f"    ERROR: {request_error}")
         else:
             print(f"    Answer: {answer}")
+            print(f"    Retrieved chunks: {len(retrieved_chunks)}")
+            for rank, chunk in enumerate(retrieved_chunks, start=1):
+                metadata = chunk.get("metadata") or {}
+                source = metadata.get("docId") or metadata.get("title") or "unknown source"
+                score = chunk.get("score")
+                score_text = f"{score:.4f}" if isinstance(score, (int, float)) else "n/a"
+                print(f"      {rank}. {chunk.get('id')} | score={score_text} | source={source}")
 
         if delay > 0 and index < total:
             time.sleep(delay)
@@ -146,6 +174,7 @@ def save_results(
             "total_questions": len(results),
             "successful_requests": successful,
             "failed_requests": failed,
+            "retrieval_logging_enabled": True,
             "scoring_enabled": False,
         },
         "results": results,
@@ -158,12 +187,12 @@ def save_results(
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
-        description="Run the IRT chatbot golden question set and save baseline responses."
+        description="Run the IRT chatbot golden set and save answers plus retrieved chunks."
     )
     parser.add_argument(
         "--url",
         default=os.getenv("IRT_BOT_URL"),
-        help="Full /ask endpoint. Can also be set with IRT_BOT_URL.",
+        help="Worker base URL or full /ask-eval endpoint. Can also be set with IRT_BOT_URL.",
     )
     parser.add_argument(
         "--dataset",
@@ -197,15 +226,15 @@ def main() -> int:
 
     if not args.url:
         print(
-            "Missing bot endpoint. Pass --url https://<worker-domain>/ask "
+            "Missing bot endpoint. Pass --url https://<worker-domain> "
             "or set IRT_BOT_URL.",
             file=sys.stderr,
         )
         return 2
 
     endpoint = args.url.rstrip("/")
-    if not endpoint.endswith("/ask"):
-        endpoint = f"{endpoint}/ask"
+    if not endpoint.endswith("/ask-eval"):
+        endpoint = f"{endpoint}/ask-eval"
 
     try:
         dataset = load_golden_dataset(args.dataset)
@@ -224,7 +253,7 @@ def main() -> int:
     print(f"Successful requests: {successful}/{len(results)}")
     print(f"Failed requests: {failed}/{len(results)}")
     print(f"Results saved to: {args.output}")
-    print("No quality scores are calculated yet; this is the baseline collection step.")
+    print("Retrieved chunks are logged for each answer; quality scoring is not enabled yet.")
 
     return 0 if failed == 0 else 1
 
