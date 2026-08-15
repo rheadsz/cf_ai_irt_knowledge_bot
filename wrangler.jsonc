@@ -5,7 +5,7 @@
 {
 	"$schema": "node_modules/wrangler/config-schema.json",
 	"name": "irt-bot",
-	"main": "src/index.ts",
+	"main": "src/eval-worker.ts",
 	"compatibility_date": "2025-10-01",
 	// workers AI binding (LLM + embeddings)
 	"ai": {
@@ -76,7 +76,7 @@
 	// "assets": { "directory": "./public/", "binding": "ASSETS" }
 	/**
 	 * Service Bindings (communicate between multiple Workers)
-	 * https://developers.cloudflare.com/workers/wrangler/configuration/#service-bindings
+	 * https://developers.cloudflare.com/workers/runtime-apis/bindings/
 	 */
 	// "services": [{ "binding": "MY_SERVICE", "service": "my-service" }]
 }
